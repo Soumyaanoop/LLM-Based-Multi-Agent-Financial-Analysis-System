@@ -23,19 +23,24 @@ The system has been deployed as a Streamlit web application, allowing users to i
 # Architecture
            
            
-           User Input
-              ↓
-      Multi AI Agent (Coordinator)
-         ↙             ↘
-Web Search Agent     Finance Agent
-   (DuckDuckGo)      (YFinanceTools)
+                                     User Input
+                                        
+                                         |
+                                  
+                                   Muli AI Agent(coorinator)
+                                    
+                                    |            |
+                        
+                         Web Search Agent        Finance Agent      
+                         (DuckDuckGo)            (YFinanceTools)
+     
 
 
 # How It Works
 
 The system consists of three agents:
 
- ## Web Search Agent
+## Web Search Agent
 
 Uses DuckDuckGo
 
@@ -178,16 +183,16 @@ The query is analyzed and routed to Finance AI Agent
 
 Pulls analyst recommendations and latest company news
 
-Outputs :
-         Analyst recommendation summary (Buy/Hold/Sell).
-         
-         Stock Fundamentals (Revenue, Market cap, etc).
 
-         Latest Company News.
+Outputs:
 
-         Sources for verification
+        Analyst Recommendation Summary (Buy/Hold/Sell)
 
+        Stock Fundamentals (Revenue, Market cap, etc)
 
+        Latest Company News
+
+        Sources for Verification
 
 
 
@@ -219,8 +224,8 @@ Click Analyze
 
 View:
 
-     Analyst recommendation summary, Stock Fundamentals, Latest News and Sources for verification
 
+Analyst Recommendations, Stock Fundamentals, Latest News and Source Verification
      
 
     
