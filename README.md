@@ -22,12 +22,14 @@ The system has been deployed as a Streamlit web application, allowing users to i
 
 # Architecture
            
-           User Query
-                ↓
-        Multi AI Agent (Controller)
-           ↙           ↘
- Web Search Agent   Finance Agent
-   (DuckDuckGo)     (YFinanceTools)
+           
+           User Input
+              ↓
+      Multi AI Agent (Coordinator)
+         ↙             ↘
+Web Search Agent     Finance Agent
+   (DuckDuckGo)      (YFinanceTools)
+
 
 # How It Works
 
@@ -66,22 +68,25 @@ Combines responses into a final answer
 
 1. Clone the repository
 
-git clone https://github.com/username/multi-agent-ai.git
-cd multi-agent-ai
+ git clone https://github.com/username/multi-agent-ai.git
+ cd multi-agent-ai
 
 2. Install dependencies
 pip install -r requirements.txt
 
 3. Setup environment variables
 
-Create a .env file in the root directory:
+ Create a .env file in the root directory:
 
-GROQ_API_KEY= my_api_key_here
+ GROQ_API_KEY= my_api_key_here
 
 
 # Code Overview
 
 ## Import Dependencies
+
+
+![1st_fin](https://github.com/user-attachments/assets/38b9bbc4-d573-48ca-ab39-0c70ab4d2f33)
 
 
 
@@ -97,7 +102,7 @@ dotenv → Loads environment variables (e.g., API keys)
 ## Load Environment Variables
 
 
-
+![2nd_fin](https://github.com/user-attachments/assets/bf795844-fe0d-4645-ba4b-6ba9de49c6dc)
 
 
 
@@ -112,7 +117,7 @@ Retrieves latest news & information
 Always includes sources
 
 
-
+![3rd_fin](https://github.com/user-attachments/assets/f70a87af-9c70-48bf-b1fc-670fe3409d36)
 
 
 
@@ -132,6 +137,7 @@ Shows financial news
 Outputs data in table format
 
 
+![4th_fin](https://github.com/user-attachments/assets/7b7cecfb-b04d-4759-b6bd-313f7dee1551)
 
 
 
@@ -143,12 +149,16 @@ What it does:
 Acts as a controller/orchestrator
 
 Routes queries to the correct agent:
-                                   Finance → finance_agent
-                                   
-                                   General search → web_search_agent
+                                   Finance -> finance_agent
+                                   General Search -> web_search_agent
+
 Ensures:
 
-Proper tool usage, Structured output and Source attribution
+Proper tool usage, Structured output and Source attribution.
+
+
+
+![5th_fin](https://github.com/user-attachments/assets/27a654c2-709d-4cf5-9f02-aae3ae094da7)
 
 
 
@@ -157,8 +167,7 @@ Proper tool usage, Structured output and Source attribution
 
 
 
-
-
+![6th_fin](https://github.com/user-attachments/assets/e9d9667a-6111-4191-aacb-5b8e1109fbc7)
 
 
 
@@ -170,13 +179,14 @@ The query is analyzed and routed to Finance AI Agent
 Pulls analyst recommendations and latest company news
 
 Outputs :
-         Analyst recommendation summary (Buy/Hold/Sell)
+         Analyst recommendation summary (Buy/Hold/Sell).
          
-         Stock fundamentals (Revenue, Market Cap, etc.)
-         
-         Latest company news
-         
+         Stock Fundamentals (Revenue, Market cap, etc).
+
+         Latest Company News.
+
          Sources for verification
+
 
 
 
@@ -186,6 +196,8 @@ Outputs :
 # Streamlit User Interface
 
 
+
+![9th_fin](https://github.com/user-attachments/assets/bd229e85-c502-423b-9739-b1ccbb7a9ab9)
 
 
 
@@ -204,25 +216,31 @@ Enter a company name (e.g., Tesla, Apple, Microsoft)
 
 Click Analyze
 
+
 View:
 
-Analyst recommendation summary
+     Analyst recommendation summary, Stock Fundamentals, Latest News and Sources for verification
 
-Stock fundamentals
+     
 
-Latest news
-
-Sources for verification
-
-
-
+    
 
 # OUTPUT
 
 
 
 
+![fin_output](https://github.com/user-attachments/assets/eace831a-166c-41dd-b049-18ee6091ccc2)
 
+
+
+
+
+
+
+
+
+![fin_output1](https://github.com/user-attachments/assets/e66999c2-677f-4d92-a7ae-e00f474e1f3d)
 
 
 
